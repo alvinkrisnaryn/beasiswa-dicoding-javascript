@@ -727,6 +727,118 @@
             penggunaan <em>statement boolean</em> ini sangat berguna.
           </p>
         </article>
+
+        <article class="2-9">
+          <h3>If/Else Statement</h3>
+          <p>
+            Setiap hari kita melakukan perhitungsn dan perbandingan guna membuat
+            keputusan, apa pun itu. Contohnya, apakah perlu mencuci kendaraan
+            ketika cuaca sedang cerah? Apa saja transportasi
+            <em>online</em> yang bisa dipesan ketika hujan untuk sampai di
+            tempat tujuan?
+          </p>
+          <p>
+            Ketika mengembangkan sebuah program, kita akan bertemu dengan alur
+            bercabang tergantung pada kondisi yang terjadi. Untuk mengakomodasi
+            dan mengecek sebuah kondisi dalam JavaScript, kita menggunakna kata
+            kunci <strong>if</strong>.
+          </p>
+          <p>
+            Statement if akan menguji suatu kondisi. Jika kondisi bernilai
+            <em>trus</em>, maka blok kode di dalamnya akan dijalankan.
+            Sebaliknya, jika bernilai <em>false</em>, maka proses yang
+            ditentukan akan dilewatkan.
+          </p>
+          <img src="" alt="" />
+          <p>
+            <em>Flowchart</em> di atas jika diterjemahkan menjadi kode, akan
+            menjadi seperti berikut.
+          </p>
+          <img src="" alt="" />
+          <p>
+            Jika Anda mengubah nilai <strong>isRaining</strong> menjadi
+            <strong>false</strong>, maka kode di dalam blok kode
+            <strong>if</strong> akan dilewatkan. Sehingga program anda tidak
+            akan mengingatkan untuk membawa payung.
+          </p>
+          <p>
+            Lalu bagaimana jika Anda ingin melakukan operasi lain ketika kondisi
+            bernilai <strong>false</strong>? Jawabannya adalah
+            <em>statement</em> <strong>else</strong>. Pada contoh kode berikut
+            kita akan melakukan pengecekan kondisi menggunakan operator
+            perbadingan
+          </p>
+          <img src="" alt="" />
+          <p>
+            Terdapat variabel <strong>x</strong> dengan nilai 50, kemudian kita
+            bertanya, "Hai JavaScript! Apakah x lebih dari 70?" Jika kondisi
+            tersebut benar, maka kita dapat memerintahkan JavaScript untuk
+            menampilkan nilainya. Jika salah, kita perintahkan JavaScript untuk
+            menampilkan teks "Nilai kurang dari 70".
+          </p>
+          <p>
+            Kita juga bisa mengecek beberaoa kondisi sekaligus dengan
+            menggabungkan <strong>else</strong> dan <strong>if</strong>.
+            Contohnya adalah seperti program berikut:
+          </p>
+          <img src="" alt="" />
+          <p>
+            Pengecekan kondisi akan dilakukan dari statement if paling awal.
+            Sehingga, ketika nilai <strong>language</strong> adalah "French",
+            maka pengecekan untuk <strong>language === "Japanese"</strong> tidak
+            akan dilakukan.
+          </p>
+          <p>
+            Selain if statement di atas, JavaScript juga mendukung
+            <em>ternary operator</em> atau <em>conditional expressions</em>.
+            Dengan ini, kita bisa menuliskan <em>if-else statement</em> hanya
+            dalam satu baris.
+          </p>
+          <img src="" alt="" />
+          <p>
+            Ternary operator membutuhkan tiga <em>operand</em>. Sebelum tanda
+            tanya (?) berisi kondisi yang ingin kita evaluasi. Kemudian diikuti
+            dengan <em>expression</em> apabila nilai kondisinya benar sebelum
+            tanda titik dua. Terakhir adalah <em>expression</em> yang dieksekusi
+            ketika kondisinya salah. Karena merupakan
+            <em>conditional expression</em>, maka operand kedua akan ketiga
+            harus mengembalikan nilai.
+          </p>
+          <section>
+            <h4>Truthy & Falsy</h4>
+            <p>
+              Di dalam if statement kita perlu memasukkan expression yang akan
+              dievaluasi. Umumnya, expression tersebut mengembalikan nilai
+              boolean untuk menentukan kondisi true atau false. Lalu bagaimana
+              jika kita menuliskan expression yang tidak mengembalikan nilai
+              boolean? Jawabannya bisa.
+            </p>
+            <p>
+              Setiap nilai pada JavaScript pada dasarnya juga mewarisi sifat
+              boolean. Nilai ini dikenal dengan <em>truthy</em> atau
+              <em>falsy</em>. Nilai truthy berarti nilai yang ketika dievaluasi
+              akan menghasilkan nilai true, begitu pula falsy bernilai false.
+              Jadi manakah yang termasuk truthy dan falsy? Selain nilai boolean
+              false, tipe data atau nilai yang dianggap falsy, antara lain:
+            </p>
+            <nav>
+              <ul>
+                <li>Number 0</li>
+                <li>BigInt 0n</li>
+                <li>String kosong seperti "" atau ''</li>
+                <li>null</li>
+                <li>underfined</li>
+                <li>Nan, atau Not a Number</li>
+              </ul>
+            </nav>
+            <p>
+              Selain contoh di atas maka nilainya adalah truthy dan ketika
+              dievaluasi ke dalam if statement akan bernilai true. Berikut ini
+              contohnya dalam kode:
+            </p>
+            <img src="" alt="" />
+          </section>
+        </article>
       </div>
     </main>
   </body>
