@@ -244,6 +244,7 @@
           </p>
           <img src="img-javascript/page-3-7.png" alt="" />
         </article>
+
         <article class="page2-4">
           <h3>Tipe Data</h3>
           <p>
@@ -331,6 +332,24 @@
               </tr>
             </table>
             <img src="img-javascript/page-4-4.png" alt="" />
+            <!-- 
+              let a = 12;
+              let b = 9;
+
+              console.log(a + b)
+              console.log(a - b)
+              console.log(a * b)
+              console.log(a / b)
+              console.log(a % b)
+
+              output:
+              21
+              3
+              108
+              1.3333333333333333
+              3
+              
+             -->
             <p>
               Pada operator aritmatika juga terdapat operator
               <em>increment</em>(++) dan <em>decrement</em> (--). Operator
@@ -392,6 +411,20 @@
               adalah seperti ini:
             </p>
             <img src="img-javascript/page-4-8.png" alt="" />
+            <!-- 
+              console.log(5n + 2n);
+              console.log(5n - 2n);
+              console.log(5n * 2n);
+              console.log(5n / 2n);
+              console.log(5n % 2n);
+
+              output
+              7n
+              3n
+              10n
+              2n; Bukan 2.5n
+              1n
+             -->
           </section>
 
           <section>
@@ -666,6 +699,17 @@
             </p>
             <p>Contohnya seperti berikut:</p>
             <img src="img-javascript/page-5-5.png" alt="" />
+            <!-- 
+              const aString = '10';
+              const aNumber = 10
+
+              console.log(aString == aNumber) // true, karena nilainya sama-sama 10
+              console.log(aString === aNumber) // false, karena walaupun nilainya sama, tetapi tipe datanya berbeda
+
+              output
+              true
+              false
+             -->
           </section>
 
           <section>
@@ -728,7 +772,7 @@
           </p>
         </article>
 
-        <article class="2-9">
+        <article class="page2-9">
           <h3>If/Else Statement</h3>
           <p>
             Setiap hari kita melakukan perhitungsn dan perbandingan guna membuat
@@ -749,12 +793,12 @@
             Sebaliknya, jika bernilai <em>false</em>, maka proses yang
             ditentukan akan dilewatkan.
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript/page-6-1.png" alt="" />
           <p>
             <em>Flowchart</em> di atas jika diterjemahkan menjadi kode, akan
             menjadi seperti berikut.
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript/page-6-2.png" alt="" />
           <p>
             Jika Anda mengubah nilai <strong>isRaining</strong> menjadi
             <strong>false</strong>, maka kode di dalam blok kode
@@ -768,7 +812,7 @@
             kita akan melakukan pengecekan kondisi menggunakan operator
             perbadingan
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript/page-6-3.png" alt="" />
           <p>
             Terdapat variabel <strong>x</strong> dengan nilai 50, kemudian kita
             bertanya, "Hai JavaScript! Apakah x lebih dari 70?" Jika kondisi
@@ -781,7 +825,25 @@
             menggabungkan <strong>else</strong> dan <strong>if</strong>.
             Contohnya adalah seperti program berikut:
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript/page-6-4.png" alt="" />
+          <!-- 
+            let language = "French";
+            let greeting = "Selamat Pagi"
+
+            if(language === "English") {
+                greeting = "Good Morning!";
+            } else if(language === "French") {
+                greeting = "Bonjour!"
+            } else if(language === "Japanese") {
+                greeting = "Ohayou Gozaimasu!"
+            }
+
+            console.log(greeting);
+
+            output
+            Bonjour!
+            
+           -->
           <p>
             Pengecekan kondisi akan dilakukan dari statement if paling awal.
             Sehingga, ketika nilai <strong>language</strong> adalah "French",
@@ -794,7 +856,7 @@
             Dengan ini, kita bisa menuliskan <em>if-else statement</em> hanya
             dalam satu baris.
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript/page-6-5.png" alt="" />
           <p>
             Ternary operator membutuhkan tiga <em>operand</em>. Sebelum tanda
             tanya (?) berisi kondisi yang ingin kita evaluasi. Kemudian diikuti
@@ -836,8 +898,60 @@
               dievaluasi ke dalam if statement akan bernilai true. Berikut ini
               contohnya dalam kode:
             </p>
-            <img src="" alt="" />
+            <img src="img-javascript/page-6-6.png" alt="" />
           </section>
+        </article>
+
+        <article class="page2-10">
+          <h4>Switch Case Statement</h4>
+          <p>
+            Sebelumnya kita telah mempelajari bagaimana percabangan logika
+            menggunakan <em>if statement</em>. Selain if, JavaScript juga
+            mendukung <em>switch statement</em> untuk melakukan pengecekan
+            banyak kondisi dengan lebih mudah dan ringkas.
+          </p>
+          <img src="img-javascript/page-6-7.png" alt="" />
+          <!-- 
+            let language = "French";
+            let greeting = null;
+
+            switch (language) {
+              case "English":
+                greeting = "Good Morning!";
+                break;
+              case "French":
+                greeting = "Bonjour!";
+                break;
+              case "Japanese":
+                greeting = "Ohayou Gozaimasu!";
+                break;
+              default:
+                greeting = "Selamat Pagi!";
+            }
+
+            console.log(greeting);
+
+            output
+            Bonjour!
+           -->
+          <p>
+            Tanda kurung setelah <em>keyworld</em>
+            <strong>switch</strong> berisi variabel atau expression yang akan
+            dievaluasi. Kemudian untuk setiap kondisi yang mungkin terjadi, kita
+            masukkan <em>keyworld</em> <strong>case</strong> diikuti dengan
+            nilai yang valid. Jika kondisi pada case sama dengan variabel pada
+            switch, maka blok kode setelah titik dua (:) akan dijalankan.
+            Keyworld <strong>break</strong> digunakan untuk keluar dari proses
+            switch. Terdapat satu case bernama <strong>default</strong> yang
+            memiliki fungsi yang sama dengan keyword <em>else</em> pada
+            <em>control flow if-else</em>. Jika tidak ada nilai yang sama dengan
+            variabel pada switch, maka blok kode ini akan dijalankan.
+          </p>
+          <p>
+            Berikut ini adalah contoh kode dari materi if-else yang dikonversi
+            menjadi statement switch:
+          </p>
+          <img src="img-javascript/page-6-8.png" alt="" />
         </article>
       </div>
     </main>
