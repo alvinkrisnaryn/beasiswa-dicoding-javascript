@@ -784,7 +784,7 @@
           <p>
             Ketika mengembangkan sebuah program, kita akan bertemu dengan alur
             bercabang tergantung pada kondisi yang terjadi. Untuk mengakomodasi
-            dan mengecek sebuah kondisi dalam JavaScript, kita menggunakna kata
+            dan mengecek sebuah kondisi dalam JavaScript, kita menggunakan kata
             kunci <strong>if</strong>.
           </p>
           <p>
@@ -1294,6 +1294,107 @@
           output
           { name: 'Millenium Falcon', maxSpeed: 1300, color: 'Glossy red' }
            -->
+        </article>
+
+        <article class="page2-13">
+          <h3>Array</h3>
+          <p>
+            Array merupakan tipe data yang dapat mengelompokkan lebih dari satu
+            nilai dan menempatkannya dalam satu variabel. Contoh:
+          </p>
+          <img src="img-javascript/page-9-1.png" alt="" />
+          <p>
+            Perbedaan array dengan object adalah data pada array disusun secara
+            berurutan dan diakses menggunakan index. Untuk mengakses nilai di
+            dalam array, kita gunakan tanda kurung siku <strong>[]</strong> yang
+            di dalamnya berisi angka yang merupakan posisi nilai yang ingin
+            diakses.
+          </p>
+          <img src="img-javascript/page-9-2.png" alt="" />
+          <p>
+            Jika Anda mengira bahwa konsol akan menampilkan teks "Cokelat", maka
+            tebakan Anda kurang tepat. Dalam sebuah array, indeks dimulai dari
+            0, sehingga ketika kita mengakses data pada
+            <strong>myArray</strong> yang berada pada indeks ke-1 artinya data
+            tersebut merupakan data pada posisi ke-2. Jadi nilai yang akan
+            ditampilkan pada konsol adalah 42.5.
+          </p>
+          <img src="img-javascript/page-9-3.png" alt="" />
+          <p>
+            Lalu, apa yang akan terjadi jika kita berusaha mengakses index di
+            luar ukuran <em>array</em>-nya? Jika kita mengakses nilai array
+            lebih dari <em>index</em>-nya, maka hasilnya akan
+            <strong>underfined</strong>. Index terakhir array selalu jumlah
+            nilai array -1.
+          </p>
+          <img src="img-javascript/page-9-4.png" alt="" />
+          <!-- 
+            let myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+            console.log(myArray[0]);
+            console.log(myArray[1]);
+            console.log(myArray[2]);
+            console.log(myArray[3]);
+            console.log(myArray[4]);
+            console.log(myArray[5]);
+            console.log("Panjang nilai myArray adalah " + myArray.length + ".");
+
+            output:
+            Cokelat
+            42.5
+            22
+            true
+            Programming
+            undefined
+            Panjang nilai myArray adalah 5.
+          -->
+          <p>
+            Sejauh ini kita baru belajar menginisialisasi dan mengakses elemen
+            dari sebuah array. Pastinya Anda bertanya, "Bagaimana kita
+            memanipulasi data pada array tersebut.?"
+          </p>
+          <p>
+            Nah, untuk menambahkan data ke dalam array, kita bisa menggunakan
+            metode <strong>push()</strong>. Fungsi push ini akan menambahkan
+            data di akhir array.
+          </p>
+          <img src="img-javascript/page-9-5.png" alt="" />
+          <p>
+            Sedangkan untuk mengeluarkan data atau elemen terakhir dari array,
+            kita bisa gunakan metode <strong>pop().</strong>
+          </p>
+          <img src="img-javascript/page-9-6.png" alt="" />
+          <p>
+            Metode lain yang bisa kita gunakan untuk memanipulasi data pada
+            array adalah shift() dan unshift(). Metode
+            <strong>shift()</strong> digunakan untuk mengeluarkan elemen pertama
+            dari array, sementara <strong>unshift()</strong> digunakan untuk
+            menambahkan elemen di awal array.
+          </p>
+          <img src="img-javascript/page-9-7.png" alt="" />
+          <p>
+            Lalu bagaimana jika kita ingin menghapus data dari array? Sama
+            seperti object, kita bisa menggunakan <em>keyword</em> delete.
+          </p>
+          <img src="img-javascript/page-9-8.png" alt="" />
+          <p>
+            Namun, perhatikan di sini bahwa <em>keyword</em>
+            <strong>delete</strong> hanya menghapus data pada index yang
+            ditentukan lalu membiarkan posisi tersebut kosong. Untuk menghapus
+            elemen, gunakan metode <strong>splice()</strong> seperti ini:
+          </p>
+          <img src="img-javascript/page-9-9.png" alt="" />
+          <p>
+            Selain untuk menghapus elemen pada array,
+            <strong>splice()</strong> juga dapat digunakan untuk menambahkan
+            elemen pada array tersebut. Caranya dengan memberikan argumen ke-3
+            (atau selanjutnya, bersifat
+            <a
+              href="https://doc.rust-lang.org/rust-by-example/macros/variadics.html"
+              ><em>variadic</em></a
+            >) sebagai nilai yang akan dimasukan pada index yang diberikan pada
+            argumen pertama.
+          </p>
+          <img src="img-javascript/page-9-10.png" alt="" />
         </article>
       </div>
     </main>
