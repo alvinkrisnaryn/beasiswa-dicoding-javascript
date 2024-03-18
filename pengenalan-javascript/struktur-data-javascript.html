@@ -303,6 +303,87 @@
           </p>
           <img src="img-javascript/page-9-10.png" alt="" />
         </article>
+
+        <article class="page2-14">
+          <h3>Spread Operator</h3>
+          <p>
+            Masih terkait dengan array, ES6 memiliki fitur menarik untuk
+            membantu pengelolaan array menjadi lebih mudah, yaitu
+            <em>spread operator</em>.
+          </p>
+          <p>
+            Sesuai namanya "spread", fitur ini digunakan untuk menyebarkan nilai
+            array atau lebih tepatnya <em>iterable object</em> menjadi beberapa
+            elemen. Spread operator dituliskan dengan tiga titik
+            <strong>(...)</strong>. Mari kita lihat contoh kode berikut:
+          </p>
+          <img src="" alt="" />
+          <p>
+            Pada kode tersebut hasil yang dicetak adalah sebuah array
+            (ditunjukkan dengan tanda
+            <strong>[]).</strong>, karena memang kita mencetak nilai favorites
+            itu sendiri. Nah, dengan menggunakan spread operator kita dapat
+            menyebarkan nilai dalam array tersebut.
+          </p>
+          <img src="" alt="" />
+          <p>
+            Terlihat perbedaannya? Mengapa bisa demikian? Spread operator
+            bekerja seperti meleburkan nilai array menjadi beberapa elemen
+            sesuai panjang nilai array-nya. Sehingga jika kita menuliskan kode
+            seperti ini:
+          </p>
+          <img src="" alt="" />
+          <!-- 
+            const favorites = ["Seafood", "Salad", "Nugget", "Soup"];
+            const others = ["Cake", "Pie", "Donut"];
+
+            const allFavorites = [favorites, others];
+
+            console.log(allFavorites);
+
+            output
+            [
+              [ 'Seafood', 'Salad', 'Nugget', 'Soup' ],
+              [ 'Cake', 'Pie', 'Donut' ]
+            ]
+           -->
+          <p>Sama seperti kita menuliskan kode seperti ini:</p>
+          <img src="" alt="" />
+          <!-- 
+            const favorites = ["Seafood", "Salad", "Nugget", "Soup"];
+            const others = ["Cake", "Pie", "Donut"];
+
+            const allFavorites = [...favorites, ...others];
+
+            console.log(allFavorites);
+
+            output
+            [ 'Seafood', 'Salad', 'Nugget', 'Soup', 'Cake', 'Pie', 'Donut' ]
+           -->
+          <p>
+            Spread operator dapat digunakan untuk menggabungkan dua buah array
+            ke dalam array baru. Jika tidak menggunakan spread operator ini maka
+            hasilnya akan seperti ini:
+          </p>
+          <img src="" alt="" />
+          <p>
+            Nilai array tidak tergabung. Alih-alih menggabungkan nilainya,
+            variabel allFavorites menjadi array baru yang menampung dua array di
+            dalamnya. Nah, lantas bagaimana jika kita mencoba menggunakan spread
+            operator?
+          </p>
+          <img src="" alt="" />
+          <p>
+            Yup, dengan menggunakan spread operator nilai dua array tersebut
+            berhasil tergabung.
+          </p>
+          <p>
+            Selain array, spread operator juga bisa digunakna untuk object
+            literals. Hal ini memungkinkan kita dapat menggabungkan beberapa
+            object dengan kode yang lebih ringkas.
+          </p>
+          <img src="" alt="" />
+        </article>
       </div>
     </main>
   </body>
