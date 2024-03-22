@@ -384,6 +384,140 @@
           </p>
           <img src="" alt="" />
         </article>
+
+        <article class="page2-15">
+          <h3>Destructuring Object & Array</h3>
+          <p>
+            Literasi object dan array adalah dua hal yang paling digunakan dalam
+            mengelola data di JavaScript. JSON (JavaScript Object Notation)
+            merupakan format data paling populer yang digunakan dalam transaksi
+            data saat ini.
+          </p>
+          <img src="" alt="" />
+          <p>
+            Jika kita lihat pada struktur JSON di atas, kita dapat menyimpulkan
+            struktur tersebut dibangun dari array dan object. Karena kedua hal
+            ini banyak digunakan untuk mengelola data pada JavaScript untuk
+            memudahkan developer, ES6 menambahkan fitur untuk
+            <em>destruturing object</em> dan <em>array</em>.
+          </p>
+          <p>
+            Apa sebenarnya destructuring object dan array itu? Destructuring
+            dalam JavaScript merupakan sintaksis yang dapat mengeluarkan nilai
+            dari array atau properties dari sebuah object ke dalam satuan yang
+            lebih kecil.
+          </p>
+          <p>
+            Secara tidak sadar mungkin kita pernah melakukan destructuring.
+            Namun, sebelum ES6 hal tersebut dilakukan dengan cara seperti ini:
+          </p>
+          <img src="" alt="" />
+          <p>
+            Perhatikan kode d atas, kode tersebut mengekstrasi nilai yang berada
+            di dalam objek, kemudian menyimpannya pada variabel lokal dengan
+            nama yang sama seperti properti di dalam object profile. Mungkin
+            mengekstrasi nilai dari object dengan langkah ini terlihat mudah,
+            tetapi bayangkan jika object memilikk banyak properti dan harus
+            melakukan hal tersebut secara manual satu persatu. Terlalu banyak
+            kode yang dituliskan berulang, bukan?
+          </p>
+          <p>
+            Itulah alasan ES6 menambahkan fitur yang memudahkan kita untuk
+            destructuring object dan array. Ketika kita ingin memecah struktur
+            data menjadi bagian-bagian yang lebih kecil, kita akan mempermudah
+            untuk mendapatkan data yang diinginkan.
+          </p>
+          <p>
+            Lantas bagaimana cara melakukan destructuring object dan array pada
+            ES6? Mari kita simak materi berikutnya.
+          </p>
+        </article>
+
+        <article class="page2-16">
+          <h3>Destructuring Object</h3>
+          <p>
+            Penulisan sintaksis destructuring object pada ES6 menggunakan object
+            literal (<strong>{}</strong>) di sisi kiri dari operator
+            <em>assignment</em>.
+          </p>
+          <img src="" alt="" />
+          <p>
+            Pada contoh di atas tanda kurung kurawal mempresentasikan object
+            yang akan didestrukturisasi. Didalamnya terdapat
+            <strong>firstName</strong>, <strong>lastName</strong>, dan
+            <strong>age</strong> yang merupakan variabel untuk menyimpan nilai
+            properti dari object profile. Kita juga perlu perhatikan penamaan
+            variabelnya. Pastikan penamaannya sama seperti properti
+            <em>object</em>-nya. Melalui nama variabel inilah nilai-nilai
+            properti object akan dimasukkan secara otomatis. Sehingga variabel
+            <strong>firstName</strong> akan berisikan nilai
+            <strong>profile.firstName</strong>, <strong>lastName</strong> akan
+            berisikan nilai <strong>profile.lastName</strong>, begitu juga
+            dengan variabel <strong>age</strong> akan berisikan nlai
+            <strong>profile.age</strong>.
+          </p>
+          <p>
+            Dalam destructuring object, kita bisa menentukan salah satu nilai
+            yang ingin kita didestrukturisasikan. Sehingga kita perlu membuat
+            variabel sebanyak properti yang dimiliki objeknya, contohnya:
+          </p>
+          <img src="" alt="" />
+          <section>
+            <h4>destruturing Assignment</h4>
+            <p>
+              Pada contoh sebelumnya, kita telah melakukan destructuring object
+              pada deklarasi variabel. Namun, pada kasus tertentu mungkin kita
+              perlu melakukannya pada variabel yang sudah dideklarasikan.
+            </p>
+            <img src="" alt="" />
+            <p>
+              Pada saat melakukan destructuring assignment, kita perlu
+              menuliskan destructuring object didalam tanda kurung. Jika tidak
+              menuliskan tanda kurung, tanda kurung kurawal akan membuat
+              JavaScript mengira kita membuat <em>block</em> statement,
+              sementara <em>block</em> statement tidak bisa berada pada sisi
+              kiri <em>assignment</em>.
+            </p>
+            <img src="" alt="" />
+            <p>
+              Nah, inilah fungsinya tanda kurung. Ia akan memberi tahu
+              JavaScript bahwa tanda kurawal di dalamnya bukan sebuah
+              <em>block statement</em> melainkan sebuah <em>expression</em>,
+              sehingga <em>assignment</em> dapat dilakukan.
+            </p>
+            <img src="" alt="" />
+            <h4>Default Values</h4>
+            <p>
+              Ketika kita mendestruksikan objek dan menetapkan variabel dengan
+              nama yang bukan merupakan properti dari objek, maka nilai dari
+              variabel tersebut menjadi <strong>undefined</strong>. Contohnya:
+            </p>
+            <img src="" alt="" />
+            <p>
+              Alternatifnya, kita bisa secara opsional mendefinisikan nilai
+              default pada properti tertentu jika tidak ditemukan. Untuk
+              melakukannya, tambahkan tanda assignment (=) setelah nama variabel
+              dan tentukan nilai <em>default</em>-nya seperti ini:
+            </p>
+            <img src="" alt="" />
+            <p>
+              Jika nilai properti tidak ditemukan, maka nilai
+              <em>default</em> akan diterapkan pada variabel.
+            </p>
+            <h4>Assigning to Different Local Variable Names</h4>
+            <p>
+              Sampai saat ini kita tahu bahwa untuk melakukan destrukturisasi
+              object pada variabel lokal, kita perlu menyeragamkan penamaan
+              variabel lokal dengan <em>object</em>-nya. Namun, sebenarnya dalam
+              proses destrukturisasi object kita bisa menggunakan penamaan
+              variabel lokal yang berbeda. ES6 menyediakan sintaksis tambahan
+              yang membuat kita dapat melakukan hal tersebut. Penulisanya mirip
+              seperti ketika kita membuat properti beserta nilainya pada object.
+            </p>
+            <p>Contohnya seperti ini:</p>
+            <img src="" alt="" />
+          </section>
+        </article>
       </div>
     </main>
   </body>
