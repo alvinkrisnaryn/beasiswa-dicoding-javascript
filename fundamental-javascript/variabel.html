@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <article class="page2-3">
+          <h3>Variable</h3>
+          <p>
+            Ketika menulis sebuah program, kita memberi tahu komputer cara
+            memproses informasi seperti mencetak teks ke layar atau melakukan
+            operasi perhitungan. Untuk lebih mudah dalam penggunaan dan
+            pemanggilan data, kita bisa memanfaatkan variabel. Variabel umumnya
+            digunakan untuk menyimpan informasi atau nilai yang akan dikelola
+            dalam sebuah program
+          </p>
+          <p>
+            Pada JavaScript setidaknya ada tiga cara untuk mendeklarasikan
+            sebuah variabel, yaitu menggunakan keyworld <strong>var</strong>,
+            <strong>let</strong>, dan <strong>const</strong>. Pada versi
+            ECMAScript 2015 (ES6) dikenalkan deklarasi variabel dengan let dan
+            const untuk menggantikan var yang dinilai kontroversial dan rawan
+            menimbulkan bug.
+          </p>
+          <p>
+            Dalam kelas ini, kita akan banyak menggunakan keyword let dan const.
+            Jika Anda penasaran kenapa var sudah tidak lagi disarankan, silahkan
+            simak diskusi
+            <a
+              href="https://softwareengineering.stackexchange.com/questions/274342/is-there-any-reason-to-use-the-var-keyword-in-es6"
+              >berikut</a
+            >
+          </p>
+          <p>
+            Sekarang bagaimana caranya membuat sebuah variabel dalam JavaScript?
+            Cukup mudah. Ketikkan keyworld <strong>let</strong> yang diikuti
+            dengan nama variabelnya.
+          </p>
+          <img src="img-javascript/page-3-1.png" alt="" />
+          <p>
+            Kode untuk mendeklarasikan variabel seperti di atas juga dikenal
+            dengan <em>declaration statement</em>.
+          </p>
+          <p>
+            Selanjutnya, Anda bisa mengisi nilai variabel di atas menggunakan
+            tanda sama dengan (=).
+          </p>
+          <img src="img-javascript/page-3-2.png" alt="" />
+          <p>
+            Anda juga bisa langsung menginisialisasi nilai variabel setelah
+            mendeklarasikannya seperti berikut:
+          </p>
+          <img src="img-javascript/page-3-3.png" alt="" />
+          <p>
+            Kode untuk menginisialisasikan nilai ke dalam sebuah variabel dengan
+            tanda sama dengan (=) ini disebut dengan
+            <em>assignment expression</em>
+          </p>
+          <p>
+            Tunggu sebentar. Kita kembali bertemu dengan istilah
+            <em>statement</em> dan <em>expression</em>. Karena expression pasti
+            menghasilkan nilai, sehingga mereka bisa muncul di mana pun dalam
+            program JavaScript. Sementara itu, statement merujuk pada aksi.
+            Sehingga, pada bagian kode tertentu yang membutuhkan nilai tidak
+            bisa kita isi dengan sebuah statement. Contohnya seperti kode
+            berikut.
+          </p>
+          <img src="img-javascript/page-3-4.png" alt="" />
+          <!-- 
+                  let fullName = let lastName; // Error karena let lastName adalah sebuah statement untuk deklarasi variabel. Statement tidak bisa berada di posisi expression.
+                  let fullName = (lastName = "Skywalker"); // (lastName = "Skywalker") merupakan expression, sehingga kode ini tidak error.
+                  let fullName = "Luke" + "Skywalker"; // "Luke" + "Skywalker" juga merupakan expression, sehingga kode ini tidak error.
+                 -->
+          <p>
+            Melalui contoh kode di atas, kita bisa bayangkan variabel sebagai
+            kotak atau wadah menyimpan nilai. Proses inisialisasi atau
+            assignment berarti kita memasukkan nilai ke dalam kotak tersebut.
+          </p>
+          <img src="img-javascript/page-3-5.png" alt="" />
+          <p>
+            Variabel <strong>lastName</strong> di atas akan tersimpan di dalam
+            memori komputer.
+          </p>
+          <p>
+            Setiap variabel memiliki nama yang dapat kita panggil dan gunakan.
+            Kita dapat menamai variabel dengan nama apa pun, tetapi pastikan
+            penamaannya masih masuk akan dan berhubungan dengan konteksnya
+            supaya <em>maintenance</em> kode menjadi lebih mudah.
+          </p>
+          <p>
+            Sebaiknya hindari penamaan variabel dengan istilah umum seperti
+            "data". Gunakanlah penamaan variabel yang dapat mendeskripsikan
+            nilai dari variabel itu sendiri. Berikut beberapa aturan dalam
+            penamaan variabel yang perlu Anda ketahui:
+          </p>
+          <nav>
+            <ul>
+              <li>Harus dimulai dengan huruf atau <em>underscore</em>(_).</li>
+              <li>
+                Dapat terdiri dari huruf, angka, dan underscore (_) dengan
+                berbagai kombinasi.
+              </li>
+              <li>
+                Tidak boleh mengandung spasi (whitespace), jika penamaan
+                variabel lebih dari dua kata, tuliskan secara camelCase. Contoh
+                firstName, lastName, catName, dll.
+              </li>
+              <li>
+                Tidak boleh mengandung karakter special (! . , / \ + * = dll.)
+              </li>
+            </ul>
+          </nav>
+          <p>
+            Lalu, bagaimana dengan <strong>const</strong>? Const merupakan
+            kependekan dari <em>constant</em>. Artinya, kita akan
+            mendeklarasikan sebuah variabel dengan const ketika ingin variabel
+            bernilai konstan dan tidak bisa diubah setelah diinisialisasi
+            nilainya. Bayangkan variabel bernilai const sebagai sebuah kotak
+            yang ditutup dan disegel setelh diisim sehingga nilainya tidak bisa
+            diubah lagi.
+          </p>
+          <img src="img-javascript/page-3-6.png" alt="" />
+          <p>
+            Jika menginisialisasi kembali nilai variabel yang menggunakan const,
+            kita akan mendapati eror "TypeError: Assignment to constant
+            variable."
+          </p>
+          <img src="img-javascript/page-3-7.png" alt="" />
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

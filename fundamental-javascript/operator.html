@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <article class="page2-8">
+          <h3>Operator</h3>
+          <p>
+            Pada materi ini kita akan mempelajari tentang operator yang terdapat
+            pada JavaScript. Operator dalam bahasa pemprograman sendiri adalah
+            simbol yang memberi tahu interpreter untuk melakukan operasi seperti
+            matematika, relasional, atau logika untuk memberikan hasil tertentu.
+          </p>
+
+          <section>
+            <h4>Assignment Operator</h4>
+            <p>
+              Dari contoh kode yang kita gunakan sebelumnya, sebenarnya kita
+              sudah menggunakan assignment operator. Operator ini digunakan
+              untuk memberikan nilai pada variabel
+            </p>
+            <p>
+              Pada dasarnya operator ini adalah tanda sama dengan (=), di mana
+              tanda ini digunakan untuk menginisialisasi nilai pada variabel.
+              Tempatkan variabel yang ingin diberi nilai di sebelah kiri,
+              sementara nilainya di sebelah kapan. Di antara keduanya terdapat
+              operator assignment.
+            </p>
+            <img src="img-javascript/page-5-1.png" alt="" />
+            <p>
+              <em>Expression</em> di atas berarti kita menginisialisasi nilai
+              <strong>y</strong> pada variabel <strong>x</strong>, sehingga
+              nilai x sekarang memiliki nilai yang sama dengan y.
+            </p>
+            <p>
+              Ada beberapa assignment operator tambahan lain dalam
+              menginisialisasikan nilai pada variabel. Kita bisa menyebutnya
+              sebagai <em>shortcut</em> dalam menentukan nilai. Contohnya:
+            </p>
+            <img src="img-javascript/page-5-2.png" alt="" />
+            <p>
+              Pada contoh kode di atas, terdapat <em>expression</em>
+              <strong>x += y;</strong> Apa artinya? Assignment operator tersebut
+              digunakan sebagai shortcut dari <strong>x = x + y.</strong> Cara
+              ini dapat digunakan pada operator artimatika lain seperti,
+              perkalian, pengurangan, pembagian, dan lainnya.
+            </p>
+            <img src="img-javascript/page-5-3.png" alt="" />
+          </section>
+
+          <section>
+            <h4>Comparison Operator</h4>
+            <p>
+              Sekarang kita sudah mengetahui bagaimana cara menyimpan nilai pada
+              sebuah variabel. Nah, selanjutnya kita akan belajar mengenai
+              operator komparasi sebagai logika dasar dalam membandingkan nilai
+              pada JavaScript
+            </p>
+            <p>
+              terdapat serangkaian karakter khusus yang disebut dengan operator
+              pembanding/komparasi yang dapat mengevaluasi dan membandingkan dua
+              nilai. Berikut daftar operator dan fungsinya:
+            </p>
+            <table border="1" cellpadding="10">
+              <tr>
+                <th>Operator</th>
+                <th>Fungsi</th>
+              </tr>
+              <tr>
+                <td>==</td>
+                <td>
+                  Membandingkan kedua nilai, tetapi mengabaikan tipe data.
+                </td>
+              </tr>
+              <tr>
+                <td>!=</td>
+                <td>
+                  Membandingkan kedua nilai haruslah tidak sama, tetapi
+                  mengabaikan tipe data.
+                </td>
+              </tr>
+              <tr>
+                <td>===</td>
+                <td>Membandingkan kedua nilai beserta tipe data.</td>
+              </tr>
+              <tr>
+                <td>!==</td>
+                <td>
+                  Membandingkan kdua nilai beserta tipe data haruslah tidak
+                  sama.
+                </td>
+              </tr>
+              <tr>
+                <td>></td>
+                <td>
+                  Membandingkan dua nilai apakah nilai pertama lebih dari nilai
+                  kedua.
+                </td>
+              </tr>
+              <tr>
+                <td>>=</td>
+                <td>
+                  Membandingkan dua nilai apakah nilai pertama lebih atau sama
+                  dengan nilai kedua.
+                </td>
+              </tr>
+              <tr>
+                <td><</td>
+                <td>
+                  Membandingkan dua nilai apakah nilai pertama kurang dari nilai
+                  kedua.
+                </td>
+              </tr>
+              <tr>
+                <td><=</td>
+                <td>
+                  Membandingkan dua nilai apakah nilai pertama kurang atau sama
+                  dengan nilai kedua.
+                </td>
+              </tr>
+            </table>
+            <p>
+              Ketika kita melakukan perbandingan antara dua nilai, JavaScript
+              akan mengevaluasi kedua nilai tersebut dan mengembalikan boolean
+              dengan nilai hasil perbandingan tersebut, baik false atau true.
+              Berikut contohnya:
+            </p>
+            <img src="img-javascript/page-5-4.png" alt="" />
+            <p><strong>Perbedaan antara "Sama" dan "Identik"</strong></p>
+            <p>
+              Dalam operator komparasi di JavaScript, hal yang menjadi sedikit
+              "tricky" adalah membedakan antara "sama" (==) dan "identik" (===).
+            </p>
+            <p>
+              Kita sudah mengetahui bahwa setiap nilai pasti memiliki tipe data
+              baik itu number, string, atau boolean. Contohnya sebuah string
+              "10" dan number 10 merupakan hal yang serupa, tetapi keduannya
+              tidak benar-benar sama.
+            </p>
+            <p>
+              Hal inilah yang membedakan antara sama dan identik pada
+              JavaScript. Jika kita ingin menbandingkan hanya dari kesamaan
+              nilainya kita bisa gunakan <strong>==</strong> tapi jika kita
+              ingin membandingkan dengan memperhatikan tipe datanya kita gunakan
+              <strong>===</strong>
+            </p>
+            <p>Contohnya seperti berikut:</p>
+            <img src="img-javascript/page-5-5.png" alt="" />
+            <!-- 
+                    const aString = '10';
+                    const aNumber = 10
+      
+                    console.log(aString == aNumber) // true, karena nilainya sama-sama 10
+                    console.log(aString === aNumber) // false, karena walaupun nilainya sama, tetapi tipe datanya berbeda
+      
+                    output
+                    true
+                    false
+                   -->
+          </section>
+
+          <section>
+            <h4>Logical Operator</h4>
+            <p>
+              Terdapat beberapa operator lain yang dapat kita gunakan untuk
+              menetapkan logika yang lebih kompleks, yakni dengan
+              <em>logical operators</em>. Dengan logical operator, kita dapat
+              menggunakan kombinasi dari dua nilai boolean atau bahkan lebih
+              dalam menetapkan logika.
+            </p>
+            <p>
+              Pada JavaScript terdapat tiga buah karakter khusus yang berfungsi
+              sebagai logical operator. Berikut macam-macam logical operator dan
+              fungsinya:
+            </p>
+            <table>
+              <tr>
+                <th>Operator</th>
+                <th>Deskripsi</th>
+              </tr>
+              <tr>
+                <td>&&</td>
+                <td>
+                  Operator dan (and). Logika akan menghasilkan nilai true
+                  apabila semua kondisi terpenuhi (bernilai true).
+                </td>
+              </tr>
+              <tr>
+                <td>||</td>
+                <td>
+                  Operator atau (or). Logika akan menghasilkan nilai true
+                  apabila salah satu kondisi terpenuhi (bernilai true).
+                </td>
+              </tr>
+              <tr>
+                <td>!</td>
+                <td>
+                  Operator tidak (not). Digunakan untuk membalikkan sesuatu
+                  kondisi.
+                </td>
+              </tr>
+            </table>
+            <p>Berikut contoh penerapannya pada JavaScript</p>
+            <img src="img-javascript/page-5-6.png" alt="" /> <br />
+            <img src="img-javascript/page-5-7.png" alt="" />
+          </section>
+          <p>
+            Mungkin sebagian dari kita bertanya, sebenarnya apa kegunaan dari
+            nilai boolean selain hanya menampilkan nilai true dan false aja?
+            Pada pembahasan tipe data sudah pernah disebutkan bahwa boolean
+            merupakan salah satu kunci dari logika pemprograman, karena boolean
+            dapat mengontrol bagaimana alur program kita akan berjalan.
+          </p>
+          <p>
+            Lantas bagaimana cara boolean mengontrol sebuah aliran program? Pada
+            materi selanjutnya, kita akan membahas mengenai if/else statement
+            yang dapat mengontrol <em>flow</em> pada program, tentunya pada
+            penggunaan <em>statement boolean</em> ini sangat berguna.
+          </p>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <article class="page2-4">
+          <h3>Tipe Data</h3>
+          <p>
+            Pada materi sebelumnya kita telah belajar tentang variabel untuk
+            menyimpan nilai. Nilai yang kita tetapkan pada variabel pasti
+            memiliki tipe data. Tipe data merupakan pengklasifikasian data
+            berdasarkan jenisnya. Pada JavaScript terdapat beberapa tipe data
+            sebagai berikut:
+          </p>
+          <section>
+            <h4>Undefined</h4>
+            <p>
+              Tipe data ini terbentuk ketika sebuah variabel tidak memiliki
+              nilai. Artinya, ketika kita mendeklarasikan variabel tanpa
+              menginisialisasikan nilainya, variabel tersebut mejadi
+              <em>undefined</em>. Contoh
+            </p>
+            <img src="img-javascript/page-4-1.png" alt="" />
+            <p>
+              Pada contoh kode di atas, kita mendeklarasikan variabel
+              <strong>x</strong>, tetapi kita tidak menginisialisasikan dengan
+              nilai/value apa pun. Ketika kita memastikan tipe data dengan
+              menggunakan fungsi <strong>typeof()</strong>. ia akan menghasilkan
+              output <strong>undefined</strong>.
+            </p>
+            <blockquote>
+              Fungsi typeof() digunakan untuk memastikan tipe data pada variabel
+              dengan mengembalikan tipe data tersebut dalam bentuk teks.
+            </blockquote>
+          </section>
+
+          <section>
+            <h4>Numbers</h4>
+            <p>
+              Nilai dari tipe data number adalah angka. Variabel bertipe data
+              number dituliskan seperti angka pada umumnya:
+            </p>
+            <img src="img-javascript/page-4-2.png" alt="" />
+            <p>
+              Jika angka tersebut merupakan sebuah bilangan desimal, maka kita
+              bisa gunakan tanda titik pada pecahan bilanganya.
+            </p>
+            <img src="img-javascript/page-4-3.png" alt="" />
+            <p>
+              Pada tipe data number, kita juga dapat melakukan perhitungan
+              aritmatika seperti penjumlahan, pengurangan, perkalian, dll.
+              Berikut operator yang dapat kita gunakan dalam perhitungan
+              aritmatika pada tipe data number:
+            </p>
+            <table border="1" cellpadding="10">
+              <tr>
+                <th>Operator</th>
+                <th>Fungsi</th>
+                <th>Contoh</th>
+              </tr>
+              <tr>
+                <td>+</td>
+                <td>Penjumlahan</td>
+                <td>5 + 5 = 10</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>Pengurangan</td>
+                <td>10 - 5 = 5</td>
+              </tr>
+              <tr>
+                <td>*</td>
+                <td>Perkalian</td>
+                <td>5 * 10 = 50</td>
+              </tr>
+              <tr>
+                <td>/</td>
+                <td>Pembagian</td>
+                <td>10 / 5 = 2</td>
+              </tr>
+              <tr>
+                <td>%</td>
+                <td>Sisa hasil bagi</td>
+                <td>10 % 2 = 0</td>
+              </tr>
+              <tr>
+                <td>**</td>
+                <td>Perpangkatan</td>
+                <td>5 ** 10 = 500</td>
+              </tr>
+            </table>
+            <img src="img-javascript/page-4-4.png" alt="" />
+            <!-- 
+                    let a = 12;
+                    let b = 9;
+      
+                    console.log(a + b)
+                    console.log(a - b)
+                    console.log(a * b)
+                    console.log(a / b)
+                    console.log(a % b)
+      
+                    output:
+                    21
+                    3
+                    108
+                    1.3333333333333333
+                    3
+                    
+                   -->
+            <p>
+              Pada operator aritmatika juga terdapat operator
+              <em>increment</em>(++) dan <em>decrement</em> (--). Operator
+              <em>increment</em> dan <em>decrement</em> digunakan untk
+              menambahkan atau mengurangi nilai 1 pada nilai variabel yang ada
+              sekarang
+            </p>
+            <p>
+              Operator ini dapat dituliskan sebelum atau sesudah variabel,
+              tetapi hal tersebut bukan berarti sama. Berikut ketentuannya:
+            </p>
+            <nav>
+              <ul>
+                <li>
+                  Jika dituliskan setelah variabel (x++),
+                  <em>expression</em> akan menghasilkan nilai variabel sebelum
+                  ditingkatkan nilainya.
+                </li>
+                <li>
+                  Jika dituliskan sebelum variabel (++x),
+                  <em>expression</em> akan menghasilkan nilai variabel setelah
+                  ditingkatkan nilaiya,
+                </li>
+              </ul>
+            </nav>
+            <p>
+              Untuk lebih jelasnya, berikut adalah contoh kode penerapan
+              operator tersebut, perhatikan hasil yang didapat.
+            </p>
+            <img src="img-javascript/page-4-5.png" alt="" />
+          </section>
+
+          <section>
+            <h4>BigInt</h4>
+            <p>
+              Pada JavaScript tipe data "Number" hanya mencakup nilai dari
+              -(2<sum>53</sum>-1) hingga (2<sum>53</sum>-1). Untuk kebutuhan
+              umum, sebenarnya nilai tersebut sudah sangat cukup. Namun, akan
+              ada kebutuhan tertentu di mana kita membutuhkan cakupan nilai yang
+              lebih besar, seperti untuk kriptografi atau menentukan waktu
+              hingga presisi <em>microsecond</em>.
+            </p>
+            <p>
+              Untuk nilai dari luar Number, kita bisa menggunakan tipe BigInt.
+              Untuk membedakan tipe BigInt dan Number, tambahkan karakter
+              <strong>n</strong> di akhir angka. Contohnya seperti kode dibawah
+              ini. Bandingkan dengan yang bertipe Number.
+            </p>
+            <img src="img-javascript/page-4-6.png" alt="" />
+            <p>
+              Walaupun digunakan untuk menyimpan angka dengan nilai besar, namun
+              BigInt tetap bisa digunakan untuk nilai yang lebih kecil.
+            </p>
+            <img src="img-javascript/page-4-7.png" alt="" />
+            <p>
+              Kita juga bisa menggunakan BigInt untuk opersi aritmatika pada
+              umumnya. Yang membedakan adalah operasi pembagian, hasilnya akan
+              dibulatkan ke bawah tanpa mengandung nilai desimal. Contohnya
+              adalah seperti ini:
+            </p>
+            <img src="img-javascript/page-4-8.png" alt="" />
+            <!-- 
+                    console.log(5n + 2n);
+                    console.log(5n - 2n);
+                    console.log(5n * 2n);
+                    console.log(5n / 2n);
+                    console.log(5n % 2n);
+      
+                    output
+                    7n
+                    3n
+                    10n
+                    2n; Bukan 2.5n
+                    1n
+                   -->
+          </section>
+
+          <section>
+            <h4>Strings</h4>
+            <p>
+              Tipe data selanjutnya adalah <em>string</em> yang merupakan sebuah
+              teks untuk menetapkan nilai sebagai string pada variabel gunakan
+              tanda petik satu (') atau petik dua (") di antara teksnya.
+              Contohnya:
+            </p>
+            <img src="img-javascript/page-4-9.png" alt="" />
+            <p>
+              Tidak ada perbedaan antara menggunakan petik satu atau petik dua.
+              Anda dapat menggunakan tanda petik secara bergantian, khususnya
+              jika Anda memiliki teks yang mengandung tanda petik.
+            </p>
+            <img src="img-javascript/page-4-10.png" alt="" />
+            <p>
+              Lalu bagaimana jika teks memiliki kedua tanda petik seperti ini?
+            </p>
+            <img src="img-javascript/page-4-11.png" alt="" />
+            <p>
+              Tentu kode di atas akan menghasilkan eror. Solusinya, gunakan
+              <em>backslash</em>(<strong>\</strong>) untuk mengurangi ambiguitas
+              dalam tanda petik. Mekanisme ini juga dikenal dengan nama
+              <em>escape string</em>. Sehingga kode di atas akan menjadi seperti
+              berikut:
+            </p>
+            <img src="img-javascript/page-4-12.png" alt="" />
+            <p>
+              Backslash sebelum tanda petik akan memberitahukan
+              <em>interpreter</em> bahwa itu hanyalah tanda petik dan tidak
+              boleh ditafsirkan sebagai pembatas string. Selain tanda petik,
+              backslash juga berguna untuk mengabaikan simbol lain yang
+              menimbulkan ambigu di dalam string, contohnya seperti backslash
+              itu sendiri.
+            </p>
+            <img src="img-javascript/page-4-13.png" alt="" />
+            <p>
+              Pada String, kita juga dapat menggunakan operator plus (+).
+              Operator tersebut berfungsi untuk menggabungkan dua teks yang
+              terpisah menjadi satu buah teks. Contohnya seperti ini:
+            </p>
+            <img src="img-javascript/page-4-14.png" alt="" />
+            <p>
+              Ingat, <em>string concatenation</em> seperti di atas akan
+              menggabungkan string apa adanya, sehingga jika Anda ingin
+              menggabungkan dua kata atau lebih perlu menambahkan spasi sendiri.
+            </p>
+            <p>
+              Selain <em>concatenation</em>, string pada JavaScript juga
+              mendukung <em>string interpolation</em>. Sederhananya, kita bisa
+              memasukan variabel ke dalam sebuah <em>string template</em>.
+              Contohnya adalah seperti berikut:
+            </p>
+            <img src="img-javascript/page-4-15.png" alt="" />
+            <p>
+              Perhatikan bahwa untuk mendefinisikan <em>string template</em>.
+              Anda perlu menggunakan <em>backticks</em>(<strong>`</strong>),
+              biasanya terletak di <em>keyboard</em> di bawah tombol Esc. Di
+              dalam string letaknya variabel yang ingin dimasukkan ke dalam
+              <em>placeholder</em> <strong>${myName}</strong>.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
