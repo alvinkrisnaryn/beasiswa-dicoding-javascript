@@ -536,7 +536,7 @@
           </section>
         </article>
 
-        <article class="page2-6">
+        <article class="page3-6">
           <h3>Destructuring Array</h3>
           <p>
             Destructuring array serupa dengan destructuring object. Object
@@ -546,7 +546,23 @@
             penamaan propertinya. Berikut contoh dari destructuring array pada
             ES6.
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript-page-3/page-3-6-1.png" alt="" />
+          <!-- 
+            const favorites = ["Seafood", "Salad", "Nugget", "Soup"];
+ 
+            const [firstFood, secondFood, thirdFood, fourthFood] = favorites;
+            
+            console.log(firstFood);
+            console.log(secondFood);
+            console.log(thirdFood);
+            console.log(fourthFood);
+            
+            output:
+            Seafood
+            Salad
+            Nugget
+            Soup
+           -->
           <p>
             Kode di atas merupakan contoh proses destructuring array. Di dalam
             array favorites terdapat 4 (empat) nilai string yang masing-masing
@@ -556,7 +572,7 @@
             variabel lokal dipilih berdasarkan posisi di mana ia dideklarasikan
             pada array.
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript-page-3/page-3-6-2.png" alt="" />
           <p>
             Sebenarnya kita bebas untuk menentukan nama dari variabel lokal.
             Yang terpenting adalah urutan ketika deklarasi variabelnya saja.
@@ -571,7 +587,7 @@
             koma (,) tetap diperlukan untuk menunjukkan posisi index-nya seperti
             ini:
           </p>
-          <img src="" alt="" />
+          <img src="img-javascript-page-3/page-3-6-3.png" alt="" />
           <section>
             <h4>Destructuring Assignment</h4>
             <p>
@@ -579,14 +595,54 @@
               Namun, tidak seperti object, kita tidak perlu membungkusnya dengan
               tanda kurung. Contohnya seperti berikut:
             </p>
-            <img src="" alt="" />
+            <img src="img-javascript-page-3/page-3-6-4.png" alt="" />
+            <!-- 
+              const favorites = ["Seafood", "Salad", "Nugget", "Soup"];
+ 
+              let myFood = "Ice Cream";
+              let herFood = "Noodles";
+              
+              [myFood, herFood] = favorites;
+              
+              console.log(myFood);
+              console.log(herFood);
+              
+              output:
+              Seafood
+              Salad
+             -->
             <p>
               Array destructuring assignment sangat berguna ketika kita hendak
               menukar nilai antara dua variabel. Sebelum ES6, untuk melakukan
               hal ini kita menggunakan cara manula menggunakan algoritma seperti
               ini:
             </p>
-            <img src="" alt="" />
+            <img src="img-javascript-page-3/page-3-6-5.png" alt="" />
+            <!-- 
+              var a = 1;
+              var b = 2;
+              var temp;
+              
+              console.log("Sebelum swap");
+              console.log("Nilai a: " + a);
+              console.log("Nilai b: " + b);
+              
+              temp = a;
+              a = b;
+              b = temp;
+              
+              console.log("Setelah swap");
+              console.log("Nilai a: " + a);
+              console.log("Nilai b: " + b);
+              
+              output
+              Sebelum swap
+              Nilai a: 1
+              Nilai b: 2
+              Setelah swap
+              Nilai a: 2
+              Nilai b: 1
+             -->
             <p>
               Untuk melakukan pertukaran nilai, kita membutuhkan variabel
               penengah. Pada contoh kode di atas menggunakan variabel
@@ -599,22 +655,148 @@
               Dengan array destructuring assignment, kita bisa menukar nilai
               variabel dengan mudah tanpa membuat variabel tambahan.
             </p>
-            <img src="" alt="" />
+            <img src="img-javascript-page-3/page-3-6-6.png" alt="" />
+            <!-- 
+              let a = 1;
+              let b = 2;
+              
+              console.log("Sebelum swap");
+              console.log("Nilai a: " + a);
+              console.log("Nilai b: " + b);
+              
+              [a, b] = [b, a] // menetapkan nilai a dengan nilai b dan nilai b dengan nilai a.
+              
+              console.log("Setelah swap");
+              console.log("Nilai a: " + a);
+              console.log("Nilai b: " + b);
+              
+              output
+              Sebelum swap
+              Nilai a: 1
+              Nilai b: 2
+              Setelah swap
+              Nilai a: 2
+              Nilai b: 1
+             -->
             <h4>Default Values</h4>
             <p>
               Ketika melakukan destructuring array, tetapu terdapat variabel
               yang posisinya tidak dapat terjangkau oleh array, maka variabel
               tersebut akan bernilai <strong>undefined</strong>. Contohnya:
             </p>
-            <img src="" alt="" />
+            <img src="img-javascript-page-3/page-3-6-7.png" alt="" />
             <p>
               Sama seperti object, pada destructuring array kita juga dapat
               memberikan nilai default pada variabel yang tidak dapat terjangkau
               oleh array, sehingga nilai pada variabel tidak akan menjadi
               undefined.
             </p>
-            <img src="" alt="" />
+            <img src="img-javascript-page-3/page-3-6-8.png" alt="" />
           </section>
+        </article>
+
+        <article class="page3-7">
+          <h3>Map</h3>
+          <p>
+            Map adalah tipe data yang menyimpan koneksi data dengan format
+            key-value layaknya Object. Yang membedakan adalah Map memperbolehkan
+            key dengan tipe data apapun, dibandingkan Object yang hanya
+            mengizinkan key bertipe String atau Symbol.
+          </p>
+          <p>
+            Untuk mendefinisikan Map gunakan <em>constructor</em> seperti di
+            bawah ini:
+          </p>
+          <img src="img-javascript-page-3/page-3-7-1.png" alt="" />
+          <p>
+            Apabila ingin menetapkan nilai dari Map secara langsung, gunakan
+            array multi dimensi seperti ini:
+          </p>
+          <img src="img-javascript-page-3/page-3-7-2.png" alt="" />
+          <p>
+            Array pertama (yang berada di luar) berfungsi untuk menyimpan
+            masing-masing elemen atau pasangan key-value dari Map. Kemudian
+            array di dalamnya, memiliki dua elemen, di mana elemen pertama
+            adalah <em>key</em> dan elemen keduanya merupakan <em>value</em>.
+          </p>
+          <p>
+            Ketika sudah membuat objek Map, kita bisa mendapatkan nilainya
+            berdasarkan key tertentu dengan metode <strong>get()</strong>. Lalu,
+            untuk menambahkan pasangan key-value baru gunakan metode
+            <strong>set()</strong>.
+          </p>
+          <img src="img-javascript-page-3/page-3-7-3.png" alt="" />
+          <!-- 
+            const capital = new Map([
+              ["Jakarta", "Indonesia"],
+              ["London", "England"],
+              ["Tokyo", "Japan"]
+            ]);
+
+            console.log(capital.size);
+            console.log(capital.get("London"));
+            capital.set("New Delhi", "India");
+            console.log(capital.size);
+            console.log(capital.get("New Delhi"));
+
+            output
+            3
+            England
+            4
+            India
+           -->
+          <p>Note:</p>
+          <p>
+            Meskioun kita bisa menetapkan dan mendapatkan data pada map seperti
+            ini:
+          </p>
+          <img src="img-javascript-page-3/page-3-7-4.png" alt="" />
+          <p>
+            Namun, kode di atas bukanlah cara yang sesuai untuk mengoperasikan
+            Map. Ketika kita menetapkan nilai map seperti di atas, data akan
+            disimpan sebagai generic object. Ini akan mengakibatkan data tidak
+            tersimpan dalam <em>Map query</em> dan tidak bisa menggunakan fitur
+            dari Map sepeti <strong>.has</strong> atau <strong>.delete</strong>.
+          </p>
+          <img src="img-javascript-page-3/page-3-7-5.png" alt="" />
+          <p>
+            Jadi, pastikan untuk menggunakan metode <strong>.set()</strong> dan
+            <strong>.get()</strong>.
+          </p>
+        </article>
+
+        <article class="page3-8">
+          <h3>Set</h3>
+          <p>
+            Struktur data yang akan kita bahas berikutnya adalah Set. Set
+            sederhananya merupakan kumpulan nilai (<em>set of values</em>). Hal
+            yang membedakan Set dengan struktur data yang lain adalah data pada
+            Set tidak berurutan dan juga tidak diindeks. Selain itu, data di
+            dalam Set juga bersifat unik dan tidak ada duplikasi. Perhatikan
+            contoh deklarasi Set dibawah ini:
+          </p>
+          <img src="img-javascript-page-3/page-3-8-1.png" alt="" />
+          <p>
+            Pada kode di atas terdapat beberapa angka yang diduplikat, yaitu
+            angka 1 dan 4. Secara otomatis Set akan membuang angka yang sama,
+            sehingga nilai yang tersimpan adalah {1,4,6}.
+          </p>
+          <p>
+            Untuk menambahkan data ke dalam Set kita bisa memanfaatkan fungsi
+            <strong>add()</strong>.
+          </p>
+          <img src="img-javascript-page-3/page-3-8-2.png" alt="" />
+          <p>
+            Fungsi <strong>add()</strong> hanya menerima satu argumen. Jika Anda
+            memasukkan array, maka array tersebut akan dianggap sebagai satu
+            elemen sendiri. Niali yang diduplikat akan diabaikan.
+          </p>
+          <img src="img-javascript-page-3/page-3-8-3.png" alt="" />
+          <p>
+            Ingat bahwa Set tidak memiliki urutan atau index, sehingga argumen
+            yang dimasukkan ke dalam fungsi <strong>delete</strong> adalah nilai
+            yang ingin dihapus, bukan <em>index</em>-nya.
+          </p>
         </article>
       </div>
     </main>
